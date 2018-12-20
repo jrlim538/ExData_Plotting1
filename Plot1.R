@@ -1,5 +1,6 @@
 #download file
 if(!file.exists('source data')){dir.create('source data')}
+file.url<-'https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip'
 download.file(file.url,destfile = "source data/power_consumption.zip")
 unzip('source data/power_consumption.zip',exdir='source data',overwrite=TRUE)
 variable.class = c(rep('character',2),rep('numeric',7))
